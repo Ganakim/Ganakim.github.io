@@ -1,3 +1,35 @@
-#header{
-    background-color: #00f;
+html{
+    background-color: #ddd;
+}
+.header{
+    background-color: #759;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:75px;
+}
+#MidOfHead{
+    display: inline-block;
+    margin: 0px 10px 3px;
+}
+.TitleBlock{
+    padding-top: 75px;
+}
+button{
+    margin: 10px 5px;
+    border: none;
+    width: 10%;
+    height: 35%;
+    background-color: #bbb;
+}
+hr{
+    width: 95%;
+}
+.mid{
+    width: 80%;
+}
+.small{
+    width: 1%;
 }
