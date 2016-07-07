@@ -33,12 +33,12 @@ hr{
 .small{
     width: 1%;
 }
-div {
-    width: auto;
-}
-iframe { 
+iframe{ 
     width: 100%; 
     padding: 0; 
     border: 0;
     height: 1100px;
+}
+#heading{
+    padding-left: 14%;
 }
