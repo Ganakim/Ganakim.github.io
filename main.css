@@ -36,3 +36,9 @@ hr{
 div {
     width: auto;
 }
+iframe { 
+    width: 100%; 
+    padding: 0; 
+    border: 0; 
+    height: auto; 
+}
