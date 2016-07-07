@@ -33,3 +33,6 @@ hr{
 .small{
     width: 1%;
 }
+div {
+    width: auto;
+}
