@@ -3,7 +3,6 @@
     <head>
         <link rel="stylesheet" type="text/css" href="main.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="./js/iframeResizer.min.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="header"></div>
@@ -15,9 +14,8 @@
             <hr class="mid">
             <hr class="small">
             <h1 id="heading">Resume</h1>
-            <div class="resumeContainer">
-                <iframe id="resumeFrame" onload="setHeight" src="https://docs.google.com/document/d/1t2nQRBUrZCDRfyFm3W3MnSVfJpLHZ5AezCHj0DtpyDA/pub?embedded=true"></iframe>
-               <script>iFrameResize({log:true})</script>
+            <div class="resumeContainer" align="center">
+                <iframe id="resumeFrame" onload="setHeight" scrolling="no" src="https://docs.google.com/document/d/1t2nQRBUrZCDRfyFm3W3MnSVfJpLHZ5AezCHj0DtpyDA/pub?embedded=true"></iframe>
             </div>
         </div>
     </body>
