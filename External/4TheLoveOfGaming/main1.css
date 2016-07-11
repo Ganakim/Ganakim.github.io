@@ -1,0 +1,26 @@
+html{
+    background-color: #ddd;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:75px;
+}
+.Content{
+    padding-top: 75px;
+}
+hr{
+    width: 95%;
+}
+.mid{
+    width: 80%;
+}
+.small{
+    width: 1%;
+}
+p{
+    border-radius: 50px;
+}
