@@ -2,4 +2,22 @@
     if(!confirm("Welcome, this page is a story adventure, would you like to continue?")){
         window.history.back();
     }
+    alert("This is the story of a pirate, who loved to sail the ocean with his friend...");
+    var PName = prompt("I can't remember his name... By chance, do you?");
+    if(!PName.indexOf("Captain ")){
+        PName = "Captain " + PName;
+    }
+    if(!/[^a-z]/i.test(PName)){
+        alert("Ah, yes, " + PName + "!");
+    }else{
+        alert("Hmm, I'm pretty sure that wasn't it, but...");
+    }
+    alert(PName + "Was quite a gifted sailor, he knew his boat like the back of his hand, and his hearty crew, who was in fact, his parrot.");
+    alert("I do in fact remember the birds name, Crackers.");
+    alert("The ocean was not a very good place for a ship as small as " + PName + "\'s, in fact, it was quite dangerous for such a small ship to be sailing outside the harbor at all.");
+    alert("\"This bit of water can't stop me! Were going trasure hunting!\"");
+    alert("And so they set sail for...");
+    var place = ("Oh, my darn memory... Where should they go?");
+    place = place + " Island";
+    alert("Alright, " + PName + " set sail for " + place + "!");
 </script>
