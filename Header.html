@@ -17,7 +17,8 @@
             var aboutBtn = document.getElementById("About");
             
             var btnFocus = window.location + "";
-            alert(btnFocus - "https://ganakim.github.io/");
+            btnFocus.replace("https://ganakim.github.io/", "");
+            alert(btnFocus);
             
             homeBtn.onclick = function()  {
                 window.location = "index.html";
