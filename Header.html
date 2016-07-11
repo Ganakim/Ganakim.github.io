@@ -16,10 +16,6 @@
             var resumeBtn = document.getElementById("Resume");
             var aboutBtn = document.getElementById("About");
             
-            var btnFocus = window.location + "";
-            btnFocus.replace("https://ganakim.github.io/", "");
-            alert(btnFocus);
-            
             homeBtn.onclick = function()  {
                 window.location = "index.html";
             };
@@ -38,4 +34,48 @@
             aboutBtn.onclick = function()  {
                 window.location = "About.html";
             };
+            
+            if(window.location == "https://ganakim.github.io/index.html"){
+                homeBtn.style.backgroundColor = "#999";
+                projectsBtn.style.backgroundColor = "#bbb";
+                extraBtn.style.backgroundColor = "#bbb";
+                portfolioBtn.style.backgroundColor = "#bbb";
+                resumeBtn.style.backgroundColor = "#bbb";
+                aboutBtn.style.backgroundColor = "#bbb";
+            }else if(window.location == "https://ganakim.github.io/Projects.html"){
+                homeBtn.style.backgroundColor = "#bbb";
+                projectsBtn.style.backgroundColor = "#999";
+                extraBtn.style.backgroundColor = "#bbb";
+                portfolioBtn.style.backgroundColor = "#bbb";
+                resumeBtn.style.backgroundColor = "#bbb";
+                aboutBtn.style.backgroundColor = "#bbb";
+            }else if(window.location == "https://ganakim.github.io/Extra.html"){
+                homeBtn.style.backgroundColor = "#bbb";
+                projectsBtn.style.backgroundColor = "#bbb";
+                extraBtn.style.backgroundColor = "#999";
+                portfolioBtn.style.backgroundColor = "#bbb";
+                resumeBtn.style.backgroundColor = "#bbb";
+                aboutBtn.style.backgroundColor = "#bbb";
+            }else if(window.location == "https://ganakim.github.io/Portfolio.html"){
+                homeBtn.style.backgroundColor = "#bbb";
+                projectsBtn.style.backgroundColor = "#bbb";
+                extraBtn.style.backgroundColor = "#bbb";
+                portfolioBtn.style.backgroundColor = "#999";
+                resumeBtn.style.backgroundColor = "#bbb";
+                aboutBtn.style.backgroundColor = "#bbb";
+            }else if(window.location == "https://ganakim.github.io/Resume.html"){
+                homeBtn.style.backgroundColor = "#bbb";
+                projectsBtn.style.backgroundColor = "#bbb";
+                extraBtn.style.backgroundColor = "#bbb";
+                portfolioBtn.style.backgroundColor = "#bbb";
+                resumeBtn.style.backgroundColor = "#999";
+                aboutBtn.style.backgroundColor = "#bbb";
+            }else{
+                homeBtn.style.backgroundColor = "#bbb";
+                projectsBtn.style.backgroundColor = "#bbb";
+                extraBtn.style.backgroundColor = "#bbb";
+                portfolioBtn.style.backgroundColor = "#bbb";
+                resumeBtn.style.backgroundColor = "#bbb";
+                aboutBtn.style.backgroundColor = "#999";
+            }
         </script>
