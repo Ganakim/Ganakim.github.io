@@ -1,5 +1,6 @@
 html{
     background-color: #ddd;
+    overflow-y: scroll;
 }
 .header{
     background-color: #759;
