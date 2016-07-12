@@ -20,6 +20,7 @@ html{
     width: 30%;
     background-color: #759;
     z-index: 2;
+    vertical-align: text-top;
 }
 #name{
     font-size: 200%;
