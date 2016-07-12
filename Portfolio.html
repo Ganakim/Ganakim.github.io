@@ -14,7 +14,49 @@
             <hr class="mid">
             <hr class="small">
             <h1>Portfolio</h1>
-            <p>This is where I will post my art/ finished projects/ stuff I want to show people.</p>
+            <div>
+                <div class="MiniHeader" align="center">
+                    <button id=Blender>Blender Renders</button>
+                    <button id="SketchBook">SketchBook</button>
+                    <button id="Other">Other</button>
+                </div>
+                <div id="BlenderDiv">
+                    <p>This is Blender stuff!</p>
+                </div>
+                <div id="SketchDiv" display="none">
+                    <p>These are sketches I drew!</p>
+                </div>
+                <div id="OtherDiv" display="none">
+                    <p>This is everything else!</p>
+                </div>
+                <script>
+                    var blenderBtn = document.getElementById("Blender");
+                    var sketchBtn = document.getElementById("SketchBook");
+                    var otherBtn = document.getElementById("Other");
+                    
+                    var blenderDiv = document.getElementById("BlenderDiv");
+                    var sketchDiv = document.getElementById("SketchDiv");
+                    var otherDiv = document.getElementById("OtherDiv");
+                    
+                    var activeDiv = "blender";
+                    
+                    blenderBtn.onclick = function(){
+                        blenderDiv.style.display = "inline";
+                        sketchDiv.style.display = "none";
+                        otherDiv.style.display = "none";
+                    }
+                    sketchBtn.onclick = function(){
+                        blenderDiv.style.display = "none";
+                        sketchDiv.style.display = "inline";
+                        otherDiv.style.display = "none";
+                    }
+                    otherBtn.onclick = function(){
+                        blenderDiv.style.display = "none";
+                        sketchDiv.style.display = "none";
+                        otherDiv.style.display = "inline";
+                    }
+                </script>
+            </div>
         </div>
     </body>
 </html>
