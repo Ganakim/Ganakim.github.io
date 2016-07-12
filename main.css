@@ -21,6 +21,9 @@ html{
     background-color: #759;
     z-index: 2;
 }
+#name{
+    font-size: 20;
+}
 #MidOfHead{
     display: inline-block;
     margin: 0px 10px 3px;
