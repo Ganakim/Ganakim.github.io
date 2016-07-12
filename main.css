@@ -16,11 +16,10 @@ html{
     position: fixed;
     top: 0;
     left: 0;
-    height: 60px;
+    height: 50px;
     width: 30%;
     background-color: #759;
     z-index: 2;
-    vertical-align: text-top;
 }
 #name{
     font-size: 200%;
