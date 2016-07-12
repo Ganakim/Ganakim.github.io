@@ -23,10 +23,10 @@
                 <div id="BlenderDiv">
                     <p>This is Blender stuff!</p>
                 </div>
-                <div id="SketchDiv" display="none">
+                <div id="SketchDiv" style="display:none;">
                     <p>These are sketches I drew!</p>
                 </div>
-                <div id="OtherDiv" display="none">
+                <div id="OtherDiv" style="display:none;">
                     <p>This is everything else!</p>
                 </div>
                 <script>
@@ -41,20 +41,23 @@
                     var activeDiv = "blender";
                     
                     blenderBtn.onclick = function(){
+                        activeDiv = "blender";
                         blenderDiv.style.display = "inline";
                         sketchDiv.style.display = "none";
                         otherDiv.style.display = "none";
-                    }
+                    };
                     sketchBtn.onclick = function(){
+                        activeDiv = "sketch";
                         blenderDiv.style.display = "none";
                         sketchDiv.style.display = "inline";
                         otherDiv.style.display = "none";
-                    }
+                    };
                     otherBtn.onclick = function(){
+                        activeDiv = "other";
                         blenderDiv.style.display = "none";
                         sketchDiv.style.display = "none";
                         otherDiv.style.display = "inline";
-                    }
+                    };
                 </script>
             </div>
         </div>
