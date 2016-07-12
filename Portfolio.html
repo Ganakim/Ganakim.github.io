@@ -38,22 +38,29 @@
                     var sketchDiv = document.getElementById("SketchDiv");
                     var otherDiv = document.getElementById("OtherDiv");
                     
-                    var activeDiv = "blender";
-                    
                     blenderBtn.onclick = function(){
-                        activeDiv = "blender";
+                        blenderBtn.style.backgroundColor = "#a9a";
+                        sketchBtn.style.backgroundColor = "#bbb";
+                        otherBtn.style.backgroundColor = "#bbb";
+                        
                         blenderDiv.style.display = "inline";
                         sketchDiv.style.display = "none";
                         otherDiv.style.display = "none";
                     };
                     sketchBtn.onclick = function(){
-                        activeDiv = "sketch";
+                        blenderBtn.style.backgroundColor = "#bbb";
+                        sketchBtn.style.backgroundColor = "#a9a";
+                        otherBtn.style.backgroundColor = "#bbb";
+                        
                         blenderDiv.style.display = "none";
                         sketchDiv.style.display = "inline";
                         otherDiv.style.display = "none";
                     };
                     otherBtn.onclick = function(){
-                        activeDiv = "other";
+                        blenderBtn.style.backgroundColor = "#bbb";
+                        sketchBtn.style.backgroundColor = "#bbb";
+                        otherBtn.style.backgroundColor = "#a9a";
+                        
                         blenderDiv.style.display = "none";
                         sketchDiv.style.display = "none";
                         otherDiv.style.display = "inline";
