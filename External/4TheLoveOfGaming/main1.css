@@ -24,4 +24,6 @@ hr{
 button{
     border-radius: 50px;
     border: none;
+    height: 50px;
+    width: 70px;
 }
