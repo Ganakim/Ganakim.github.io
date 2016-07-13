@@ -7,10 +7,10 @@ html{
     left: 0;
     right: 0;
     bottom: 0;
-    height:75px;
+    height:30px;
 }
 .Content{
-    padding-top: 75px;
+    padding-top: 30px;
 }
 hr{
     width: 95%;
@@ -21,6 +21,7 @@ hr{
 .small{
     width: 1%;
 }
-p{
+button{
     border-radius: 50px;
+    border: none;
 }

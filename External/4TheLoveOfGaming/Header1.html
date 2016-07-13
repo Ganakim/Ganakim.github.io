@@ -1,30 +1,26 @@
-<div align="right">
-    <a id="Home">Home</a>
-    <a id="About">About</a>
-    <a id="Contact">Contact</a>
+<div class="header" align="right">
+    <button id="Home">Home</button>
+    <button id="About">About</button>
+    <button id="Contact">Contact</button>
 </div>
 <script>
     var homeBtn = document.getElementById("Home");
     var aboutBtn = document.getElementById("About");
     var contactBtn = document.getElementById("Contact");
     
-    homeBtn.onfocus = function(){
-        homeBtn.style.backgroundColor = "#f00";
-    };
-    aboutBtn.onfocus = function(){
-        aboutBtn.style.backgroundColor = "#f00";
-    };
-    contactBtn.onfocus = function(){
-        contactBtn.style.backgroundColor = "#f00";
-    };
-    
     homeBtn.onclick = function(){
         homeBtn.style.backgroundColor = "#f00";
+        aboutBtn.style.backgroundColor = "#ddd";
+        contactBtn.style.backgroundColor = "#ddd";
     };
     aboutBtn.onclick = function(){
+        homeBtn.style.backgroundColor = "#ddd";
         aboutBtn.style.backgroundColor = "#f00";
+        contactBtn.style.backgroundColor = "#ddd";
     };
     contactBtn.onclick = function(){
+        homeBtn.style.backgroundColor = "#ddd";
+        aboutBtn.style.backgroundColor = "#ddd";
         contactBtn.style.backgroundColor = "#f00";
     };
 </script>
