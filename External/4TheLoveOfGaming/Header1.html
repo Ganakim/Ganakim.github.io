@@ -10,20 +10,25 @@
     
     homeBtn.onclick = function(){
         window.location = "4log.html";
-        homeBtn.style.backgroundColor = "#f00";
-        aboutBtn.style.backgroundColor = "#eee";
-        contactBtn.style.backgroundColor = "#eee";
     };
     aboutBtn.onclick = function(){
         window.location = "About.html";
-        homeBtn.style.backgroundColor = "#eee";
-        aboutBtn.style.backgroundColor = "#f00";
-        contactBtn.style.backgroundColor = "#eee";
     };
     contactBtn.onclick = function(){
         window.location = "Contact.html";
+    };
+    
+    if(window.location == "https://ganakim.github.io/External/4TheLoveOfGaming/About.html"){
+        homeBtn.style.backgroundColor = "#eee";
+        aboutBtn.style.backgroundColor = "#f00";
+        contactBtn.style.backgroundColor = "#eee";
+    }else if(window.location == "https://ganakim.github.io/External/4TheLoveOfGaming/Contact.html"){
         homeBtn.style.backgroundColor = "#eee";
         aboutBtn.style.backgroundColor = "#eee";
         contactBtn.style.backgroundColor = "#f00";
-    };
+    }else{
+        homeBtn.style.backgroundColor = "#f00";
+        aboutBtn.style.backgroundColor = "#eee";
+        contactBtn.style.backgroundColor = "#eee";
+    }
 </script>
