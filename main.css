@@ -60,3 +60,6 @@ h1{
 .smallTab{
     width: 133px;
 }
+img{
+    float: left;
+}
