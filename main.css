@@ -64,4 +64,5 @@ h1{
     float: left;
     padding: 0px 10px 5px;
     width: 45%;
+    display: block;
 }
