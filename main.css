@@ -60,8 +60,8 @@ h1{
 .smallTab{
     width: 133px;
 }
-img{
+#SketchDiv img{
     float: left;
     padding: 0px 10px 5px;
-    width: 50%;
+    width: 45%;
 }
