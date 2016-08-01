@@ -27,19 +27,21 @@
                 </div>
                 <div id="SketchDiv" style="display:none;" align="center">
                     <p>These are sketches I drew!</p>
-                    <img src="Resources/Sketches/Adventures(BW).JPG">
-                    <img src="Resources/Sketches/Dot.JPG">
-                    <img src="Resources/Sketches/Eterna1.JPG">
-                    <img src="Resources/Sketches/Eyes(Blue).JPG">
-                    <img src="Resources/Sketches/Eyes(Red).JPG">
-                    <img src="Resources/Sketches/Fi.JPG">
-                    <img src="Resources/Sketches/Ice_Climbers.JPG">
-                    <img src="Resources/Sketches/korra.JPG">
-                    <img src="Resources/Sketches/Joy.JPG">
-                    <img src="Resources/Sketches/Midna.JPG">
-                    <img src="Resources/Sketches/Simples1.JPG">
-                    <img src="Resources/Sketches/The_Beast.JPG">
-                    <img src="Resources/Sketches/Vanellope.JPG">
+                    <div id="leftColumn"></div>
+                    <div id="rightColumn"></div>
+                    <!--<img src="Resources/Sketches/Adventures(BW).JPG">-->
+                    <!--<img src="Resources/Sketches/Dot.JPG">-->
+                    <!--<img src="Resources/Sketches/Eterna1.JPG">-->
+                    <!--<img src="Resources/Sketches/Eyes(Blue).JPG">-->
+                    <!--<img src="Resources/Sketches/Eyes(Red).JPG">-->
+                    <!--<img src="Resources/Sketches/Fi.JPG">-->
+                    <!--<img src="Resources/Sketches/Ice_Climbers.JPG">-->
+                    <!--<img src="Resources/Sketches/korra.JPG">-->
+                    <!--<img src="Resources/Sketches/Joy.JPG">-->
+                    <!--<img src="Resources/Sketches/Midna.JPG">-->
+                    <!--<img src="Resources/Sketches/Simples1.JPG">-->
+                    <!--<img src="Resources/Sketches/The_Beast.JPG">-->
+                    <!--<img src="Resources/Sketches/Vanellope.JPG">-->
                 </div>
                 <div id="OtherDiv" style="display:none;">
                     <p>This is everything else!</p>
@@ -52,6 +54,8 @@
                     
                     var blenderDiv = document.getElementById("BlenderDiv");
                     var sketchDiv = document.getElementById("SketchDiv");
+                    var leftsketch = document.getElementById("leftColumn");
+                    var rightsketch = document.getElementById("rightColumn");
                     var otherDiv = document.getElementById("OtherDiv");
                     
                     blenderBtn.style.backgroundColor = "#a9a";
@@ -86,7 +90,9 @@
                         otherDiv.style.display = "inline";
                     };
                     
-                    /*var xmlHttp = new XMLHttpRequest();
+                    
+                    
+                    var xmlHttp = new XMLHttpRequest();
                     xmlHttp.onreadystatechange = function() {
                         if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                             // process the response
@@ -96,7 +102,7 @@
                         }
                     }
                     xmlHttp.open("GET", "./Images", true); // true for asynchronous
-                    xmlHttp.send(null);*/
+                    xmlHttp.send(null);
                 </script>
             </div>
         </div>

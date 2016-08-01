@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Ganakim/Ganakim.github.io/issues"
   },
-  "homepage": "https://github.com/Ganakim/Ganakim.github.io#readme",
+  "homepage": "https://github.ganakim.io#readme",
   "dependencies": {
     "dropbox": "^2.0.0",
     "express": "^4.14.0"

@@ -6,6 +6,7 @@ var app = express();
 app.use(express.static('Client'));
 
 app.get('/images', function(req, res) {
+  
   var dbx = new dropbox({ accessToken: 'kg_gKGD2HoUAAAAAAAAB-RDYetv_dfoZUykrwLAh_Y8ARzWUq7LH4usEUW8WxLf8' });
   dbx.filesListFolder({path: '/ForSite'})
     .then(function(response) {
