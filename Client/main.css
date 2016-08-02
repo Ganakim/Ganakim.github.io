@@ -62,7 +62,39 @@ h1{
 }
 #SketchDiv img{
     float: left;
-    padding: 0px 10px 5px;
-    width: 45%;
+    padding: 5px;
+    height: 200px;
     display: block;
+}
+#BlenderDiv img{
+    float: left;
+    padding: 5px;
+    height: 200px;
+    display: block;
+}
+#Display{
+    background-color: #222;
+    display: none;
+    position: absolute;
+    top: 150px;
+    left: 17.5%;
+    width: 65%;
+}
+#Display button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+#BlurDiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: .5;
+    display: none;
 }

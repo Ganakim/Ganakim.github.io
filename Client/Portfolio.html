@@ -10,6 +10,7 @@
             $("#header").load("Header.html");
         </script>
         <div class="TitleBlock">
+            <div id="BlurDiv"></div>
             <hr>
             <hr class="mid">
             <hr class="small">
@@ -18,91 +19,87 @@
                 <div class="MiniHeader" align="center">
                     <button class="smallTab" id=Blender>Blender Renders</button>
                     <button class="smallTab" id="SketchBook">SketchBook</button>
-                    <button class="smallTab" id="Other">Other</button>
                 </div>
                 <hr>
-                <div id="BlenderDiv" style="display:inline;">
+                <div id="Display" align="left">
+                    <button id="DisplayBtn">X</button>
+                    <img id="Preview">
+                </div>
+                <div id="BlenderDiv" style="display:inline;" align="center">
                     <p>This is Blender stuff!</p>
-                    <img src="Resources/Renders/Tea.png" width="50%">
                 </div>
                 <div id="SketchDiv" style="display:none;" align="center">
                     <p>These are sketches I drew!</p>
-                    <div id="leftColumn"></div>
-                    <div id="rightColumn"></div>
-                    <!--<img src="Resources/Sketches/Adventures(BW).JPG">-->
-                    <!--<img src="Resources/Sketches/Dot.JPG">-->
-                    <!--<img src="Resources/Sketches/Eterna1.JPG">-->
-                    <!--<img src="Resources/Sketches/Eyes(Blue).JPG">-->
-                    <!--<img src="Resources/Sketches/Eyes(Red).JPG">-->
-                    <!--<img src="Resources/Sketches/Fi.JPG">-->
-                    <!--<img src="Resources/Sketches/Ice_Climbers.JPG">-->
-                    <!--<img src="Resources/Sketches/korra.JPG">-->
-                    <!--<img src="Resources/Sketches/Joy.JPG">-->
-                    <!--<img src="Resources/Sketches/Midna.JPG">-->
-                    <!--<img src="Resources/Sketches/Simples1.JPG">-->
-                    <!--<img src="Resources/Sketches/The_Beast.JPG">-->
-                    <!--<img src="Resources/Sketches/Vanellope.JPG">-->
-                </div>
-                <div id="OtherDiv" style="display:none;">
-                    <p>This is everything else!</p>
                 </div>
                 <script>
                     
                     var blenderBtn = document.getElementById("Blender");
                     var sketchBtn = document.getElementById("SketchBook");
-                    var otherBtn = document.getElementById("Other");
+                    var closeBtn = document.getElementById("DisplayBtn");
                     
                     var blenderDiv = document.getElementById("BlenderDiv");
                     var sketchDiv = document.getElementById("SketchDiv");
-                    var leftsketch = document.getElementById("leftColumn");
-                    var rightsketch = document.getElementById("rightColumn");
-                    var otherDiv = document.getElementById("OtherDiv");
+                    var displayDiv = document.getElementById("Display");
+                    var displayImg = document.getElementById("Preview");
+                    var blurDiv = document.getElementById("BlurDiv");
                     
                     blenderBtn.style.backgroundColor = "#a9a";
                     
                     blenderBtn.onclick = function(){
                         blenderBtn.style.backgroundColor = "#a9a";
                         sketchBtn.style.backgroundColor = "#bbb";
-                        otherBtn.style.backgroundColor = "#bbb";
                         
                         blenderDiv.style.display = "inline";
                         sketchDiv.style.display = "none";
-                        otherDiv.style.display = "none";
                     };
                     sketchBtn.onclick = function(){
                         blenderBtn.style.backgroundColor = "#bbb";
                         sketchBtn.style.backgroundColor = "#a9a";
-                        otherBtn.style.backgroundColor = "#bbb";
                         
                         blenderDiv.style.display = "none";
                         sketchDiv.style.minHeight = "2em";
-                        sketchDiv.style.display = "table-cell";
+                        sketchDiv.style.display = "inline";
                         sketchDiv.style.verticalAlign =  "top";
-                        otherDiv.style.display = "none";
                     };
-                    otherBtn.onclick = function(){
-                        blenderBtn.style.backgroundColor = "#bbb";
-                        sketchBtn.style.backgroundColor = "#bbb";
-                        otherBtn.style.backgroundColor = "#a9a";
-                        
-                        blenderDiv.style.display = "none";
-                        sketchDiv.style.display = "none";
-                        otherDiv.style.display = "inline";
+                    closeBtn.onclick = function(){
+                        displayDiv.style.display = "none";
+                        blurDiv.style.display = "none";
+                    };
+                    window.onload = function() {
+                        $.get("./imagesS", function(res){
+                            for(var i = 0; i < res.length; i++){
+                                var img = document.createElement("img");
+                                img.src = res[i];
+                                
+                                img.onclick = function(){
+                                    displayDiv.style.display = "block";
+                                    blurDiv.style.display = "block";
+                                    displayDiv.style.left -= (this.width + 10)/2;
+                                    displayImg.src=this.src;
+                                    displayImg.style.height = 'auto';
+                                    displayImg.style.width = 'calc(100% - 10px)';
+                                };
+                                sketchDiv.appendChild(img);
+                            }
+                        });
+                        $.get("./imagesB", function(res){
+                            for(var i = 0; i < res.length; i++){
+                                var img = document.createElement("img");
+                                img.src = res[i];
+                                
+                                img.onclick = function(){
+                                    displayDiv.style.display = "block";
+                                    blurDiv.style.display = "block";
+                                    displayDiv.style.left -= (this.width + 10)/2;
+                                    displayImg.src=this.src;
+                                    displayImg.style.height = 'auto';
+                                    displayImg.style.width = 'calc(100% - 10px)';
+                                };
+                                blenderDiv.appendChild(img);
+                            }
+                        });
                     };
                     
-                    
-                    
-                    var xmlHttp = new XMLHttpRequest();
-                    xmlHttp.onreadystatechange = function() {
-                        if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                            // process the response
-                            console.log(xmlHttp.responseText);
-                            // process the response
-                            var response = 
-                        }
-                    }
-                    xmlHttp.open("GET", "./Images", true); // true for asynchronous
-                    xmlHttp.send(null);
                 </script>
             </div>
         </div>
