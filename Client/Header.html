@@ -1,5 +1,5 @@
 <div class="Title" align="right">
-    <p id="name">Spencer Cornwall</p>
+    <p id="name" style="font-family:Verdana;color:#000">Spencer Cornwall</p>
 </div>
 <div class="header" align="center">
     <button id="Home">Home</button>
@@ -19,6 +19,7 @@
     var aboutBtn = document.getElementById("About");
     
     homeBtn.onclick = function()  {
+        console.log(window.location);
         window.location = "index.html";
     };
     projectsBtn.onclick = function()  {
@@ -28,7 +29,7 @@
         window.location = "Extra.html";
     };
     portfolioBtn.onclick = function()  {
-        window.location = "Portfolio.html";
+        window.location = "Portfolio.php";
     };
     resumeBtn.onclick = function()  {
         window.location = "Resume.html";
@@ -37,35 +38,35 @@
         window.location = "About.html";
     };
     
-    if(window.location == "https://ganakim-github-io-ganakim.cs50.io/About.html"){
+    if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Client/About.html"){
         homeBtn.style.backgroundColor = "#bbb";
         projectsBtn.style.backgroundColor = "#bbb";
         extraBtn.style.backgroundColor = "#bbb";
         portfolioBtn.style.backgroundColor = "#bbb";
         resumeBtn.style.backgroundColor = "#bbb";
         aboutBtn.style.backgroundColor = "#a9a";
-    }else if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Projects.html"){
+    }else if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Client/Projects.html"){
         homeBtn.style.backgroundColor = "#bbb";
         projectsBtn.style.backgroundColor = "#a9a";
         extraBtn.style.backgroundColor = "#bbb";
         portfolioBtn.style.backgroundColor = "#bbb";
         resumeBtn.style.backgroundColor = "#bbb";
         aboutBtn.style.backgroundColor = "#bbb";
-    }else if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Extra.html"){
+    }else if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Client/Extra.html"){
         homeBtn.style.backgroundColor = "#bbb";
         projectsBtn.style.backgroundColor = "#bbb";
         extraBtn.style.backgroundColor = "#a9a";
         portfolioBtn.style.backgroundColor = "#bbb";
         resumeBtn.style.backgroundColor = "#bbb";
         aboutBtn.style.backgroundColor = "#bbb";
-    }else if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Portfolio.html"){
+    }else if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Client/Portfolio.php"){
         homeBtn.style.backgroundColor = "#bbb";
         projectsBtn.style.backgroundColor = "#bbb";
         extraBtn.style.backgroundColor = "#bbb";
         portfolioBtn.style.backgroundColor = "#a9a";
         resumeBtn.style.backgroundColor = "#bbb";
         aboutBtn.style.backgroundColor = "#bbb";
-    }else if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Resume.html"){
+    }else if(window.location == "https://ganakim-github-io-ganakim.cs50.io/Client/Resume.html"){
         homeBtn.style.backgroundColor = "#bbb";
         projectsBtn.style.backgroundColor = "#bbb";
         extraBtn.style.backgroundColor = "#bbb";

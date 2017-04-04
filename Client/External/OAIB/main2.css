@@ -1,0 +1,31 @@
+html{
+    background-color: #ddd;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:70px;
+    background-color: #c00;
+}
+.Content{
+    padding-top: 70px;
+}
+hr{
+    width: 95%;
+}
+.mid{
+    width: 80%;
+}
+.small{
+    width: 1%;
+}
+button{
+    margin: 10px;
+    border-radius: 50px;
+    border: none;
+    height: 50px;
+    width: 100px;
+}

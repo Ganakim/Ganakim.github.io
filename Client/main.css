@@ -1,6 +1,8 @@
 html{
     background-color: #ddd;
     overflow-y: scroll;
+    font-family: "Arial";
+    color: #222;
 }
 .header{
     background-color: #759;
@@ -32,9 +34,15 @@ html{
 .TitleBlock{
     padding-top: 75px;
 }
+.content{
+    margin-left: 20px;
+    padding-left: 30px;
+    border-left: 2px solid #537;
+}
 button{
     margin: 10px 5px;
     border: none;
+    border-top: 2px solid #333;
     width: 10%;
     height: 35%;
     background-color: #bbb;
@@ -47,12 +55,6 @@ hr{
 }
 .small{
     width: 1%;
-}
-iframe{ 
-    width: 100%; 
-    padding: 0; 
-    border: 0;
-    height: 1100px;
 }
 h1{
     padding-left: 5%;
@@ -74,19 +76,23 @@ h1{
 }
 #Display{
     background-color: #222;
+    background-color: rgba(0,0,0,0);
     display: none;
     position: absolute;
-    top: 150px;
-    left: 17.5%;
-    width: 65%;
+    margin-bottom: 60px;
 }
 #Display button{
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    z-index: 1;
+    right: 0px;
+    top: 75px;
     width: 50px;
     height: 50px;
     margin: 5px;
+    border: none;
+}
+button:hover{
+    background-color:#a9a !important;
 }
 #BlurDiv{
     position: fixed;
@@ -97,4 +103,10 @@ h1{
     background-color: black;
     opacity: .5;
     display: none;
+}
+a:visited{
+    color: #338;
+}
+li p{
+    margin-left: 20px;
 }

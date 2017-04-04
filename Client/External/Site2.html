@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+        <div id="blueStripe"></div>
+        <div id="greenStripe"></div>
+        <div id="greenlStripe"></div>
+        <div id="corner"></div>
+        <p>Score: <p id="score">0</p>  Time: <p id="time">0</p></p>
+        <button id="Ball"></button>
+        <style>
+            html{
+                background-color: limegreen;
+            }
+            #Ball{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: fixed;
+                z-index: 4;
+            }
+            button:hover{
+                background-color: mediumSeaGreen;
+            }
+            #blueStripe{
+                position: fixed;
+                -ms-transform: skewX(-10deg);
+                -o-transform: skewX(-10deg);
+                -moz-transform: skewX(-10deg);
+                -webkit-transform: skewX(-10deg);
+                transform: skewX(-10deg);
+                top: 0;
+                height: 100%;
+                bottom: 0;
+                left: 75%;
+                right: -1000;
+                z-index: 2;
+                background-color: chartreuse;
+            }
+            #greenStripe{
+                position: fixed;
+                -ms-transform: skewX(-10deg);
+                -o-transform: skewX(-10deg);
+                -moz-transform: skewX(-10deg);
+                -webkit-transform: skewX(-10deg);
+                transform: skewX(-10deg);
+                top: 0;
+                height: 100%;
+                bottom: 0;
+                left: 65%;
+                right: 10%;
+                z-index: 1;
+                background-color: green;
+            }
+            #greenlStripe{
+                position: fixed;
+                -ms-transform: skewX(-10deg);
+                -o-transform: skewX(-10deg);
+                -moz-transform: skewX(-10deg);
+                -webkit-transform: skewX(-10deg);
+                transform: skewX(-10deg);
+                top: 0;
+                height: 100%;
+                bottom: 0;
+                left: 82%;
+                right: 6%;
+                z-index: 3;
+                background-color: greenyellow;
+            }
+            #corner{
+                position: fixed;
+                -ms-transform: skewX(-10deg);
+                -o-transform: skewX(-10deg);
+                -moz-transform: skewX(-10deg);
+                -webkit-transform: skewX(-10deg);
+                transform: skewX(-10deg);
+                top: 0;
+                height: 100%;
+                bottom: 0;
+                left: -1000;
+                right: 98%;
+                z-index: -1;
+                background-color: seaGreen;
+            }
+        </style>
+    </body>
+    <script>
+        var ball = document.getElementById("Ball");
+        ball.style.top = '50%';
+        ball.style.left = '45%';
+        var diff = 1;
+        var time = 0;
+        var score = 0;
+        if(time <= 100){
+            var difficulty = setInterval(function(){diff += 1;}, 5000);
+            var timer = setInterval(function(){document.getElementById("time").textContent = time; time++;}, 1000);
+            var exe = setInterval(function(){
+                var xVal = Math.floor(Math.random() * 2) + 1;
+                var yVal = Math.floor(Math.random() * 2) + 1;
+                var offset = ball.getBoundingClientRect();
+                var xPos = offset.left;
+                var yPos = offset.top;
+                if(xVal == 1){
+                    if(xPos < window.innerWidth - (diff + 25)){
+                        ball.style.left = (xPos + diff) + 'px';
+                    }else{
+                        ball.style.left = (xPos - diff) + 'px';
+                    }
+                }else{
+                    if(xPos > (diff + 25)){
+                        ball.style.left = (xPos - diff) + 'px';
+                    }else{
+                        ball.style.left = (xPos + diff) + 'px';
+                    }
+                }
+                if(yVal == 1){
+                    if(yPos < window.innerHeight - (diff + 25)){
+                        ball.style.top = (yPos + diff) + 'px';
+                    }else{
+                        ball.style.top = (yPos - diff) + 'px';
+                    }
+                }else{
+                    if(yPos > (diff + 25)){
+                        ball.style.top = (yPos - diff) + 'px';
+                    }else{
+                        ball.style.top = (yPos + diff) + 'px';
+                    }
+                }
+                if($(ball).css("background-color") == "rgb(60, 179, 113)"){
+                    document.getElementById("score").textContent = score;
+                    score++;
+                }
+            }, 5);
+        }else{
+            clearInterval(exe);
+            clearInterval(timer);
+            clearInterval(difficulty);
+        }
+    </script>
+</html>
