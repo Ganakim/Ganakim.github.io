@@ -1,5 +1,6 @@
 <div class="header" align="right">
-    <img src="../../Resources/LogoTest2.svg" style="float:left; margin-left:50px;" height="70px">
+    <a href = "/Client/index.html"><img src="../../Resources/S.jpg" style="float:left;" height="70px"></a>
+    <img src="../../Resources/LogoTest2.svg" style="float:left;" height="70px">
     <button id="Home">Home</button>
     <button id="About">About</button>
     <button id="Contact">Contact</button>
@@ -10,7 +11,7 @@
     var contactBtn = document.getElementById("Contact");
     
     homeBtn.onclick = function(){
-        window.location = "4log.html";
+        window.location = "OAIB.html";
     };
     aboutBtn.onclick = function(){
         window.location = "About.html";
@@ -19,11 +20,13 @@
         window.location = "Contact.html";
     };
     
-    if(window.location == "https://ganakim.github.io/External/4TheLoveOfGaming/About.html"){
+    var path = "https://ganakim.github.io/Client/External/OAIB/";
+    
+    if(window.location == path + "About.html"){
         homeBtn.style.backgroundColor = "#bbb";
         aboutBtn.style.backgroundColor = "#f22";
         contactBtn.style.backgroundColor = "#bbb";
-    }else if(window.location == "https://ganakim.github.io/External/4TheLoveOfGaming/Contact.html"){
+    }else if(window.location == path + "Contact.html"){
         homeBtn.style.backgroundColor = "#bbb";
         aboutBtn.style.backgroundColor = "#bbb";
         contactBtn.style.backgroundColor = "#f22";
